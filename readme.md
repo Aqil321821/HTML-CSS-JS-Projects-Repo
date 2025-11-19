@@ -44,6 +44,7 @@ All projects are deployed for quick live previews, with source code organized in
 
 - **HTML5**
 - **CSS3**
+- **Bootstrap**
 - **JavaScript (ES6+)**
 - **Netlify** for deployment
 - **Git & GitHub** for version control
