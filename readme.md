@@ -1,4 +1,4 @@
-# HTML & CSS Bootstrap & JS Projects Repository
+# HTML, CSS, Bootstrap & JS Projects Repository
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -25,6 +25,8 @@ All projects are deployed for quick live previews, with source code organized in
 | 02  | Shoe Cards               | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 03  | Responsive Pricing Grid  | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 04  | Representational website | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 05  | Landing Page with A Form | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 06  | Gallery App Grid         | [Live Demo](https://your-netlify-link.netlify.app/) |
 
 ---
 
