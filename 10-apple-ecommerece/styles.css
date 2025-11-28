@@ -43,6 +43,7 @@ html {
   position: absolute;
   top: 3rem;
   left: 3rem;
+  z-index: 1;
 }
 
 .logo i {
@@ -51,6 +52,7 @@ html {
 }
 .navbar {
   position: absolute;
+  z-index: 1;
   top: 3rem;
   right: 10%;
 }
@@ -69,6 +71,7 @@ html {
 /* Banner */
 .section-1-banner {
   flex-direction: column;
+  z-index: 1;
 }
 
 .section-1-banner h1 {
@@ -106,3 +109,30 @@ html {
 .section-1-banner button:hover {
   color: var(--primary-color);
 }
+
+/* Slideshow styles */
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* the div which we inserted in slidshow via JS */
+.slideshow div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: opacity 5s;
+  opacity: 0;
+}
+.slideshow div.active {
+  opacity: 1;
+}
+
