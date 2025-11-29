@@ -310,7 +310,7 @@ html {
 /* End of Slideshow */
 /* End of Section 1 */
 
-/* Section 2 */
+/* Section 2 styles */
 .section-2 {
   width: 100%;
   height: 120vh;
@@ -321,7 +321,6 @@ html {
   justify-content: space-around;
 }
 
-/* Section 2 Heading */
 .section-2-heading {
   font-size: 10rem;
   font-weight: 200;
@@ -343,9 +342,7 @@ html {
   z-index: -1;
   border-radius: 1rem;
 }
-/* End of Section 2 Heading */
 
-/* Section 2 Images */
 .iphones {
   height: 60vh;
   width: 50vw;
@@ -372,9 +369,7 @@ html {
 .iphones:hover .iphone-img-2 {
   opacity: 1;
 }
-/* End of Section 2 Images */
 
-/* Section 2 Buttons */
 .iphone-btns {
   display: flex;
 }
@@ -413,10 +408,8 @@ html {
 .iphone-btn:hover span {
   transform: scale(1);
 }
-/* End of Section 2 Buttons */
-/* End of Section 2 */
 
-/* Section 3 */
+/* Section 3 styles*/
 .section-3 {
   width: 100%;
   height: 100%;
