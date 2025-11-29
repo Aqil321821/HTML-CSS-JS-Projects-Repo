@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple Store</title>
     <link rel="shortcut icon" href="images/Icons/home-icon.png" />
-
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   </head>
   <body>
     <div class="container">
       <!-- Section 1 -->
       <section class="section-1" id="section-1">
         <!-- Logo -->
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
           <i class="fab fa-apple"></i>
         </a>
 
@@ -26,6 +25,40 @@
           <a href="#section-4" class="navbar-link">AirPods</a>
         </nav>
 
+        <!-- Cube -->
+        <div class="cube-wrapper">
+          <div class="cube">
+            <div class="front-side">
+              <img src="images/iphone.png" />
+            </div>
+            <div class="back-side center">
+              <i class="fab fa-apple"></i>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls">
+            <a href="#" class="top-x-control">
+              <i class="fas fa-arrow-up"></i>
+            </a>
+            <a href="#" class="bottom-x-control">
+              <i class="fas fa-arrow-down"></i>
+            </a>
+            <a href="#" class="left-y-control">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="#" class="right-y-control">
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#" class="top-z-control">
+              <i class="fas fa-arrow-down"></i>
+            </a>
+            <a href="#" class="bottom-z-control">
+              <i class="fas fa-arrow-up"></i>
+            </a>
+          </div>
+        </div>
+
         <!-- Banner -->
         <div class="section-1-banner center">
           <h1>&#8592; Best Gift</h1>
@@ -34,11 +67,12 @@
           <button type="button">Buy Now</button>
         </div>
 
-        <!-- slides in banner backgrounds -->
+        <!-- Slideshow -->
         <div class="slideshow"></div>
       </section>
+      <!-- End of Section 1 -->
     </div>
 
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
   </body>
 </html>
