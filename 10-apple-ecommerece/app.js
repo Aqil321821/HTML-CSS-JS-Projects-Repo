@@ -160,6 +160,7 @@ watchBottomControl.addEventListener('click', () => {
 
 watchRightControl.addEventListener('click', () => {
   watchBands.style.marginRight = `${(axisX += 70)}rem`;
+  console.log(axisX);
   hideControl();
 });
 
