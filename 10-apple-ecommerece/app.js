@@ -61,7 +61,6 @@ document.querySelector('.controls').addEventListener('mouseout', () => {
   playPause();
 });
 
-
 // Slideshow
 const slideshowDivs = () => {
   for (let i = 1; i <= 5; i++) {
@@ -119,8 +118,8 @@ const watchRightControl = document.querySelector('.watch-right-control');
 const watchBottomControl = document.querySelector('.watch-bottom-control');
 const watchLeftControl = document.querySelector('.watch-left-control');
 
-let axisY = 0;
-let axisX = 0;
+let axisY = 0; /*watch-cases kitna upar/neeche gaye — isko track karna.*/
+let axisX = 0; /*watch-bands kitna right/left gaye — isko number mein track karna*/
 
 const hideControl = () => {
   if (axisY === -280) {
@@ -149,7 +148,8 @@ const hideControl = () => {
 };
 
 watchTopControl.addEventListener('click', () => {
-  watchCases.style.marginTop = `${(axisY -= 70)}rem`;
+  watchCases.style.marginTop = `${(axisY = axisY - 70)}rem`;
+  // watchCases.style.marginTop = '-70rem';
   hideControl();
 });
 

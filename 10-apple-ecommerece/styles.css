@@ -558,8 +558,8 @@ html {
 
 /* Section 4 */
 .section-4 {
-  height: 140vh;
-  padding: 20vh 0;
+  height: 150vh;
+  padding: 18vh 0;
   flex-direction: column;
   position: relative;
 }
