@@ -78,7 +78,6 @@ html {
 .hamburger-menu {
   width: 3rem;
   height: 3rem;
-  /* border: 1px solid red; */
   position: fixed;
   top: 5rem;
   right: 5rem;
@@ -87,11 +86,84 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
+  transition: right 0.7s;
 }
 .line {
   width: 100%;
   height: 0.2rem;
   background-color: #fff;
+}
+.hamburger-menu.active {
+  right: 33rem;
+}
+.hamburger-menu.active .line {
+  background-color: #555;
+}
+
+.hamburger-menu.active .line-1 {
+  transform: translateY(8px) rotate(45deg);
+  transition: all 0.5s;
+}
+.hamburger-menu.active .line-3 {
+  transform: translateY(-8px) rotate(-45deg);
+  transition: all 0.5s;
+}
+.hamburger-menu.active .line-2 {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+/* sidebar */
+.sidebar {
+  width: 40rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -40rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s;
+}
+.sidebar.active {
+  right: 0;
+}
+.menu-link {
+  font-family: 'Baloo Da 2', serif;
+  font-size: 4rem;
+  color: #555;
+  transition: all 0.3s;
+}
+.menu-link:hover {
+  color: #c29525;
+}
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media i {
+  font-size: 2.2rem;
+  margin: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #777;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+  background-color: #c29525;
 }
 
 /* css keyframes for bg image of header */
