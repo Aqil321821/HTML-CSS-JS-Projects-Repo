@@ -29,6 +29,9 @@ All projects are deployed for quick live previews, with source code organized in
 | 06  | Gallery App Grid         | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 07  | Tutor Website            | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 08  | Leno App Website         | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 09  | Business Website         | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 10  | Apple Website            | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 11  | Builder Website          | [Live Demo](https://your-netlify-link.netlify.app/) |
 
 ---
 
