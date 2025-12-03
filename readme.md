@@ -33,6 +33,7 @@ All projects are deployed for quick live previews, with source code organized in
 | 10  | Apple Website            | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 11  | Builder Website          | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 12  | A Tour Website           | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 13  | Paypal Clone             | [Live Demo](https://your-netlify-link.netlify.app/) |
 
 ---
 
