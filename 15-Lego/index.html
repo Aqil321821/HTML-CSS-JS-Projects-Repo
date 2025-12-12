@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO | Toy Stores</title>
+    <link rel="shortcut icon" href="./assets/brand-lego.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Debug button (hidden) -->
+    <button id="toggle-debug" class="d-none">DB</button>
+
+    <!-- Header starts-->
+    <div class="top-div" id="top-div">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
+          <button class="btn-1 d-none d-lg-block">
+            <i class="bi bi-arrow-left me-2"></i>
+            PLAY ZONE
+          </button>
+          <div class="swiper mySwiper mw-50 top-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide fs-0-8">Lorem ipsum dolor sit amet elit.</div>
+              <div class="swiper-slide fs-0-8">Fugit adipisci accusantium amet et tempora commodi.</div>
+              <div class="swiper-slide fs-0-8">
+                Buy Now Flash Sale is on !
+                <a href="#" class="ms-1">Learn more</a>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="d-flex d-none d-lg-flex">
+            <div class="fs-0-8 d-flex align-items-center me-2">
+              <img style="width: 15px" class="me-2" src="./assets/icons/icon-1.svg" alt="signin-icon" />
+              <strong class="d-none d-xl-block">Sign in</strong>
+            </div>
+            |
+            <div class="fs-0-8 d-flex align-items-center">
+              <img style="width: 15px" class="ms-2 me-1" src="./assets/icons/icon-2.svg" alt="join-icon" />
+              <strong class="d-none d-xl-block">Join LEGO</strong>
+            </div>
+          </div>
+          <!-- close icon show when screen < 992px -->
+          <div class="d-lg-none d-flex align-items-center" onclick="closeTopbar()" style="cursor: pointer">
+            <i class="bi bi-x-lg" style="font-size: 1.5rem !important"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-yellow">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <button
+            onclick="animateBars()"
+            id="btnRs"
+            class="navbar-toggler me-4"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="icon-bar-1"></span>
+            <span class="icon-bar-2"></span>
+            <span class="icon-bar-3"></span>
+            <small>MENU</small>
+          </button>
+          <a class="navbar-brand me-5" href="#">
+            <img src="./assets/brand-lego.svg" alt="LEGO logo" style="width: 50px; height: 50px" />
+          </a>
+        </div>
+
+        <!-- icons on mob screens on right side -->
+        <div class="d-lg-none">
+          <div class="d-flex">
+            <a class="btn-search me-3" id="btnSearchRS" onclick="openSearchRS()">
+              <img src="./assets/icons/icon-3.svg" alt="search-icon" style="width: 20px; height: 20px" />
+            </a>
+
+            <div class="input-group me-4 d-none" id="inpSearchRS">
+              <input
+                style="z-index: 1051"
+                type="text"
+                class="form-control input-field position-relative"
+                name="search-field"
+                id="searchInput"
+                aria-label="Search field" />
+              <div
+                class="position-absolute btn-prev h-100 d-flex align-items-center"
+                id="searchIcon"
+                style="z-index: 1051">
+                <img src="./assets/icons/icon-3.svg" alt="search-icon" style="width: 20px; height: 20px" />
+              </div>
+              <div
+                class="position-absolute btn-next h-100 d-flex align-items-center"
+                id="clearBtn"
+                style="z-index: 1051"
+                onclick="openSearchRS()">
+                <i class="bi bi-x"></i>
+              </div>
+            </div>
+            <a href="#" class="me-3 d-flex align-items-center">
+              <img src="./assets/icons/icon-1.svg" alt="wishlist-icon" style="width: 20px; height: 20px" />
+            </a>
+            <a href="#" class="me-3 d-flex align-items-center">
+              <img src="./assets/icons/icon-4.svg" alt="wishlist-icon" style="width: 20px; height: 20px" />
+            </a>
+            <a href="#" class="d-flex align-items-center me-3">
+              <img src="./assets/icons/icon-5.svg" alt="cart-icon" style="width: 20px; height: 20px" />
+            </a>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="#">SHOP</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="#">DISCOVER</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="#">HELP</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="btn-2" href="#">SALE !</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a class="btn-search me-3" id="btnSearch" onclick="openSearch()">
+              <img src="./assets/icons/icon-3.svg" alt="search-icon" style="width: 20px; height: 20px" />
+            </a>
+
+            <!--Search input-->
+            <div class="input-group me-4 d-none" id="inpSearch">
+              <input
+                style="z-index: 1051"
+                type="text"
+                class="form-control input-field position-relative"
+                name="search-field"
+                id="searchInput"
+                aria-label="Search field" />
+              <div
+                class="position-absolute btn-prev h-100 d-flex align-items-center"
+                id="searchIcon"
+                style="z-index: 1051">
+                <img src="./assets/icons/icon-3.svg" alt="search-icon" style="width: 20px; height: 20px" />
+              </div>
+              <div
+                class="position-absolute btn-next h-100 d-flex align-items-center"
+                id="clearBtn"
+                style="z-index: 1051"
+                onclick="openSearch()">
+                <i class="bi bi-x"></i>
+              </div>
+            </div>
+
+            <a href="#" class="me-3 d-flex align-items-center">
+              <img src="./assets/icons/icon-4.svg" alt="wishlist-icon" style="width: 20px; height: 20px" />
+            </a>
+            <a href="#" class="d-flex align-items-center">
+              <img src="./assets/icons/icon-5.svg" alt="cart-icon" style="width: 20px; height: 20px" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title p-2" id="offcanvasExampleLabel">MENU</h5>
+        <button type="button" class="btn-close p-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" style="flex-grow: inherit !important">
+        <button class="btn-1 p-3 mb-3 w-100 d-flex justify-content-center" style="font-size: 0.8rem !important">
+          <i class="bi bi-arrow-left me-2"></i>
+          PLAY ZONE
+        </button>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" style="border-top: 0px !important; color: #bc0c0c">HOME</li>
+        <li class="list-group-item">Falsh Sale !</li>
+        <li class="list-group-item">SHOP</li>
+        <li class="list-group-item">DISCOVER</li>
+        <li class="list-group-item">HELP</li>
+        <li class="list-group-item">
+          <img src="./assets/icons/icon-1.svg" style="width: 20px" class="me-3" />
+          Sign in
+        </li>
+        <li class="list-group-item">
+          <img src="./assets/icons/icon-2.svg" style="width: 20px" class="me-3" />
+          Join LEGO Insiders
+        </li>
+        <li class="list-group-item">My Blog</li>
+        <li class="list-group-item">
+          <i class="bi bi-geo-alt me-3"></i>
+          United States
+        </li>
+      </ul>
+    </div>
+
+    <!-- Backdrop shadow -->
+    <div id="box-shadow"></div>
+
+    <!-- Main content -->
+    <main>
+      <!-- First section -->
+      <section>
+        <div class="container w-mx-1300 hero">
+          <div class="row position-relative">
+            <div class="col-lg-12">
+              <img src="./assets/home/back-full.webp" class="w-100" alt="banner" />
+            </div>
+            <div
+              class="text-content col-sm-3 d-flex flex-column justify-content-center align-items-center position-absolute">
+              <h1 class="text-center">
+                <strong class="fw-medium ls-1px">Flash Sale!</strong>
+              </h1>
+              <span class="text-center sale d-none d-md-inline py-md-3 fs-1-1"
+                >Fill your basket with savings on selected LEGO items</span
+              >
+              <button class="btn-3">
+                <span class="me-sm-2 fw-medium">Shop Now</span>
+                <i class="bi bi-chevron-right fs-1-4"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row bg-yellow mx-0">
+            <div class="col-lg-12 py-4 d-flex justify-content-center">
+              <ul class="list-inline d-flex justify-content-center flex-wrap gap-3">
+                <li>
+                  <img src="./assets/home/home-1.webp" alt="New" />
+                  <small>New</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-2.webp" alt="Electronics" />
+                  <small>Electronics</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-3.webp" alt="Offers" />
+                  <small>Offers</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-4.webp" alt="Bestsellers" />
+                  <small>Bestsellers</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-5.webp" alt="Star Wars" />
+                  <small>Star Wars</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-6.webp" alt="LEGO Icons" />
+                  <small>LEGO Icons</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-7.webp" alt="Gift Finder" />
+                  <small>Gift finder</small>
+                </li>
+                <li>
+                  <img src="./assets/home/home-8.webp" alt="LEGO Insiders" />
+                  <small>LEGO Insiders</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second section / section of week -->
+      <section class="week py-7">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <h2 class="text-black fw-light">This week's top Picks</h2>
+            </div>
+
+            <div class="swiper" id="slider2">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="card border-none">
+                    <img src="./assets/home/banner-1.webp" class="w-100" />
+                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                      <h5 class="text-center fw-500">Engage in a thrilling galactic chase</h5>
+                      <small class="my-2 text-center">LEGO Star Wars sets bring a galaxy of fun for fans</small>
+                      <a class="text-decoration-none link-dark d-flex align-items-center">
+                        <span class="me-2"> Shop Now </span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="card border-none">
+                    <img src="./assets/home/banner-2.webp" class="w-100" />
+                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                      <h5 class="text-center fw-500">Rev up your creative excitement</h5>
+                      <small class="my-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing.</small>
+                      <a class="text-decoration-none link-dark d-flex align-items-center">
+                        <span class="me-2"> Shop Now </span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="card border-none">
+                    <img src="./assets/home/banner-3.webp" class="w-100" />
+                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                      <h5 class="text-center fw-500">New Medieval Town Square</h5>
+                      <small class="my-2 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</small>
+                      <a class="text-decoration-none link-dark d-flex align-items-center">
+                        <span class="me-2"> Shop Now </span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Scrollbar -->
+              <div class="swiper-scrollbar week-bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- third section -->
+      <section class="third pb-7">
+        <div class="container">
+          <div class="row bg-navy">
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="mb-4 mb-md-0">
+                <h4 class="text-white fw-medium">Gifts With Purchase</h4>
+                <button class="btn btn-outline-light btn-sm rounded-4 px-3">Shop Now</button>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="swiper" id="slider3">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <div class="card-body d-flex gap-3 px-5">
+                        <img src="./assets/home/gift-1.webp" />
+                        <div class="d-flex flex-column">
+                          <div class="gift align-self-start">
+                            <i class="bi bi-gift me-1"></i>
+                            <span>Gift with Purchase</span>
+                          </div>
+                          <div class="align-self-start">
+                            <p>Spring Garden House</p>
+                            <small class="text-start d-block">With purchase of $80 & above<sup>*</sup> </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide #2 -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <div class="card-body d-flex gap-3 px-5">
+                        <img src="./assets/home/gift-2.webp" />
+                        <div class="d-flex flex-column">
+                          <div class="gift align-self-start">
+                            <i class="bi bi-gift me-1"></i>
+
+                            <span>Gift with Purchase</span>
+                          </div>
+                          <div class="align-self-start">
+                            <p>Easter Bunny with Eggs</p>
+                            <small class="text-start d-block">With purchase of $80 & above<sup>*</sup> </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- slide #3 -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <div class="card-body d-flex gap-3 px-5">
+                        <img src="./assets/home/gift-1.webp" />
+                        <div class="d-flex flex-column">
+                          <div class="gift align-self-start">
+                            <i class="bi bi-gift me-1"></i>
+
+                            <span>Gift with Purchase</span>
+                          </div>
+                          <div class="align-self-start">
+                            <p>Spring Garden House</p>
+                            <small class="text-start d-block">With purchase of $80 & above<sup>*</sup> </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Scrollbar -->
+                <div class="swiper-scrollbar-3 gift-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- fourth section -->
+      <section class="fourth pb-7">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <h2 class="text-black fw-light">What others are buying</h2>
+            </div>
+
+            <div class="swiper" id="slider4">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide" style="max-width: 400px">
+                  <div>
+                    <div class="card mb-2">
+                      <div class="card-header-top pt-3">
+                        <button class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-heart"></i>
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <img src="./assets/home/product-1.webp" alt="" class="w-100 h-100 object-fit-cover" />
+                      </div>
+                      <div class="card-header bg-white text-start pb-3">
+                        <span class="badge text-bg-warning">New</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start flex-column">
+                      <h6 class="fw-700 text-black mt-3 align-self-start">2025 McLaren Formula 1 Race Car</h6>
+                      <div class="align-self-start mt-1">
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                      </div>
+                      <div class="align-self-start mt-2 text-black fw-600">
+                        <span>USD 26.50</span>
+                      </div>
+
+                      <button class="btn-5 text-center">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- slide#2 -->
+                <div class="swiper-slide" style="max-width: 400px">
+                  <div>
+                    <div class="card mb-2">
+                      <div class="card-header-top pt-3">
+                        <button class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-heart"></i>
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <img src="./assets/home/product-1.webp" alt="" class="w-100 h-100 object-fit-cover" />
+                      </div>
+                      <div class="card-header bg-white text-start pb-3">
+                        <span class="badge text-bg-warning">New</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start flex-column">
+                      <h6 class="fw-700 text-black mt-3 align-self-start">2025 McLaren Formula 1 Race Car</h6>
+                      <div class="align-self-start mt-1">
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                      </div>
+                      <div class="align-self-start mt-2 text-black fw-600">
+                        <span>USD 26.50</span>
+                      </div>
+
+                      <button class="btn-5 text-center">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" style="max-width: 400px">
+                  <div>
+                    <div class="card mb-2">
+                      <div class="card-header-top pt-3">
+                        <button class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-heart"></i>
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <img src="./assets/home/product-1.webp" alt="" class="w-100" />
+                      </div>
+                      <div class="card-header bg-white text-start pb-3">
+                        <span class="badge text-bg-warning">New</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start flex-column">
+                      <h6 class="fw-700 text-black mt-3 align-self-start">2025 McLaren Formula 1 Race Car</h6>
+                      <div class="align-self-start mt-1">
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                      </div>
+                      <div class="align-self-start mt-2 text-black fw-600">
+                        <span>USD 26.50</span>
+                      </div>
+
+                      <button class="btn-5 text-center">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- slide 4 -->
+
+                <div class="swiper-slide" style="max-width: 400px">
+                  <div>
+                    <div class="card mb-2">
+                      <div class="card-header-top pt-3">
+                        <button class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-heart"></i>
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <img src="./assets/home/product-1.webp" alt="" class="w-100" />
+                      </div>
+                      <div class="card-header bg-white text-start pb-3">
+                        <span class="badge text-bg-warning">New</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start flex-column">
+                      <h6 class="fw-700 text-black mt-3 align-self-start">2025 McLaren Formula 1 Race Car</h6>
+                      <div class="align-self-start mt-1">
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                      </div>
+                      <div class="align-self-start mt-2 text-black fw-600">
+                        <span>USD 26.50</span>
+                      </div>
+
+                      <button class="btn-5 text-center">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <!--slide#5  -->
+                <div class="swiper-slide" style="max-width: 400px">
+                  <div>
+                    <div class="card mb-2">
+                      <div class="card-header-top pt-3">
+                        <button class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-heart"></i>
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <img src="./assets/home/product-1.webp" alt="" class="w-100" />
+                      </div>
+                      <div class="card-header bg-white text-start pb-3">
+                        <span class="badge text-bg-warning">New</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start flex-column">
+                      <h6 class="fw-700 text-black mt-3 align-self-start">2025 McLaren Formula 1 Race Car</h6>
+                      <div class="align-self-start mt-1">
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                        <img src="./assets/home/star.svg" style="width: 15px" />
+                      </div>
+                      <div class="align-self-start mt-2 text-black fw-600">
+                        <span>USD 26.50</span>
+                      </div>
+
+                      <button class="btn-5 text-center">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Scrollbar -->
+              <div class="swiper-scrollbar swiper-scrollbar-4"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- fifth section -->
+      <section class="fifth">
+        <div class="container">
+          <div class="row first-row text-center py-3 text-white" style="background-color: #201d48">
+            <div class="col-12">
+              <h3 class="mb-3">Discover endless worlds to create</h3>
+            </div>
+            <div class="col-12 d-flex justify-content-center gap-3">
+              <button class="btn btn-outline-light rounded-5">Products</button>
+              <button class="btn btn-outline-light rounded-5">About</button>
+            </div>
+          </div>
+
+          <div class="row second-row">
+            <div class="col-lg-6 box-1 d-flex align-items-center px-5">
+              <div>
+                <h3>Give them endless world to build</h3>
+                <p>Let them play unstoppable and spark their creativity without limits.</p>
+                <button class="btn-3">
+                  Shop Now
+                  <i class="bi bi-chevron-right fs-1-4"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 box-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 6 -->
+      <section class="sixth">
+        <div class="container">
+          <!-- Swiper -->
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="swiper" id="slider5">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="card border-none">
+                      <img src="./assets/home/block-1.webp" class="w-100" />
+                      <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                        <h5 class="text-center fw-500">New Medieval Town Square</h5>
+                        <small class="my-2 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</small>
+                        <a class="text-decoration-none d-flex align-items-center">
+                          <span class="me-2"> Shop Now </span>
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="card border-none">
+                      <img src="./assets/home/block-2.webp" class="w-100" />
+                      <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                        <h5 class="text-center fw-500">New Medieval Town Square</h5>
+                        <small class="my-2 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</small>
+                        <a class="text-decoration-none link-dark d-flex align-items-center">
+                          <span class="me-2"> Shop Now </span>
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <div class="card border-none">
+                      <img src="./assets/home/block-3.webp" class="w-100" />
+                      <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                        <h5 class="text-center fw-500">New Medieval Town Square</h5>
+                        <small class="my-2 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</small>
+                        <a class="text-decoration-none link-dark d-flex align-items-center">
+                          <span class="me-2"> Shop Now </span>
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-none">
+                      <img src="./assets/home/block-4.webp" class="w-100" />
+                      <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                        <h5 class="text-center fw-500">New Medieval Town Square</h5>
+                        <small class="my-2 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</small>
+                        <a class="text-decoration-none link-dark d-flex align-items-center">
+                          <span class="me-2"> Shop Now </span>
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card border-none">
+                      <img src="./assets/home/block-3.webp" class="w-100" />
+                      <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                        <h5 class="text-center fw-500">New Medieval Town Square</h5>
+                        <small class="my-2 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</small>
+                        <a class="text-decoration-none link-dark d-flex align-items-center">
+                          <span class="me-2"> Shop Now </span>
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Scrollbar -->
+                <div class="swiper-scrollbar bar-5"></div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 7 -->
+      <section class="seven">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 box-1"></div>
+            <div class="col-lg-6 box-2 d-flex align-items-center px-5">
+              <div>
+                <h3>Give them endless world to build</h3>
+                <p>Let them play unstoppable and spark their creativity without limits.</p>
+                <button class="btn-3">
+                  Shop Now
+                  <i class="bi bi-chevron-right fs-1-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 small-pic">
+              <img src="./assets/home/banner-103.webp" class="w-100" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 8-->
+
+      <section class="eight">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-content py-5 px-3 text-center">
+              <h3 class="fw-semibold">Find insipiration, share your creation</h3>
+              <p class="lead m-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos totam laborum veniam officiis nesciunt
+                quasi ipsam ab. Voluptatibus, pariatur hic?
+              </p>
+            </div>
+            <div class="col-12 pb-3 pic-gallery">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                  <img src="./assets/home/photo-1.jpeg" class="w-100" />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                  <img src="./assets/home/photo-2.jpeg" class="w-100" />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                  <img src="./assets/home/photo-3.jpeg" class="w-100" />
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <img src="./assets/home/photo-4.jpeg" class="w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="mt-5 pt-5">
+      <div class="container">
+        <!-- first row -->
+        <div class="row first-row mb-3">
+          <!-- first col 3/12 -->
+          <div class="col-lg-3 col-md-12 d-flex flex-column gap-2">
+            <img class="logo mb-4" src="./assets/brand-lego.svg" />
+            <button class="btn btn-dark mb-4 align-self-start">
+              <i class="bi bi-geo-alt"></i>
+              United States
+            </button>
+            <ul class="align-self-start list-unstyled">
+              <li><a href="">Gift Cards</a></li>
+              <li><a href="">Find Insipirations</a></li>
+              <li><a href="">LEGO Catalogs</a></li>
+              <li><a href="">Find a LEGO Store</a></li>
+            </ul>
+          </div>
+          <!-- second col 9/12 on medium & above-->
+          <div class="col-lg-9 col-md-12 d-none d-md-block">
+            <div class="row">
+              <!-- Column 1 -->
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <h6 class="mb-4 mt-2">ABOUT US</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">About LEGO Group</a></li>
+                  <li><a href="">LEGO News</a></li>
+                  <li><a href="">Sustainabilty</a></li>
+                  <li><a href="">Supply Chain Transparency</a></li>
+                  <li><a href="">LEGO Products Certification</a></li>
+                  <li><a href="">LEGO Jobs</a></li>
+                  <li><a href="">LEGO Compliance Lines</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <h6 class="mb-4 mt-2">CUSTOMER SERVICE</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">Help Center</a></li>
+                  <li><a href="">Shipping & Delivery</a></li>
+                  <li><a href="">Returns & Refunds</a></li>
+                  <li><a href="">Order Status</a></li>
+                  <li><a href="">FAQs</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <h6 class="mb-4 mt-2">LEGAL</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">Privacy Policy</a></li>
+                  <li><a href="">Terms & Conditions</a></li>
+                  <li><a href="">Cookie Policy</a></li>
+                  <li><a href="">Accessibility</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 4 -->
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <h6 class="mb-4 mt-2">RESOURCES</h6>
+                <ul class="list-unstyled">
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Building Instructions</a></li>
+                  <li><a href="">Gift Cards</a></li>
+                  <li><a href="">Affiliate Program</a></li>
+                  <li><a href="">Community</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--second col 9/12  accordion on md screen on small screen -->
+          <div class="col-lg-9 col-md-12 d-md-none acc-col">
+            <div class="accordion" id="accordionExample3">
+              <!-- 1st Acc item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne">
+                    ABOUT US
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
+                  <ul class="list-unstyled">
+                    <li><a href="">About LEGO Group</a></li>
+                    <li><a href="">LEGO News</a></li>
+                    <li><a href="">Sustainabilty</a></li>
+                    <li><a href="">Supply Chain Transparency</a></li>
+                    <li><a href="">LEGO Products Certification</a></li>
+                    <li><a href="">LEGO Jobs</a></li>
+                    <li><a href="">LEGO Compliance Lines</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 2nd Acc item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    CUSTOMER SERVICE
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+                  <ul class="list-unstyled">
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Shipping & Delivery</a></li>
+                    <li><a href="">Returns & Refunds</a></li>
+                    <li><a href="">Order Status</a></li>
+                    <li><a href="">FAQs</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 3rd acc item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree">
+                    LEGAL
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+                  <ul class="list-unstyled">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                    <li><a href="">Accessibility</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 4th acc item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour">
+                    RESOURCES
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+                  <ul class="list-unstyled">
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Building Instructions</a></li>
+                    <li><a href="">Gift Cards</a></li>
+                    <li><a href="">Affiliate Program</a></li>
+                    <li><a href="">Community</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- second row -->
+        <div class="d-flex justify-content-between sec-row">
+          <div class="box-1">
+            <label class="text-white fw-medium mb-3" for="form-email">SUBSCRIBE TO LEGO EMAILS</label>
+            <div class="input-group mb-3">
+              <input type="text" id="form-email" class="form-control" placeholder="Enter Your Email " />
+              <i class="input-group-text bi bi-chevron-right"></i>
+            </div>
+          </div>
+          <div class="box-2">
+            <h5 class="text-white">FOLLOW US</h5>
+            <div class="social">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-whatsapp"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-instagram"></i>
+            </div>
+          </div>
+        </div>
+        <!-- third row -->
+        <div class="row third-row mt-4">
+          <div class="col-lg-12">
+            <ul class="list-unstyled d-flex flex-row column-gap-5 row-gap-3 justify-content-start flex-wrap">
+              <li>
+                <small><a href="">Privacy Policy</a></small>
+              </li>
+              <li>
+                <small><a href="">Cookies</a></small>
+              </li>
+              <li>
+                <small><a href="">Site Settings</a></small>
+              </li>
+              <li>
+                <small><a href="">Accessibility</a></small>
+              </li>
+              <li>
+                <small><a href="">Contact Us</a></small>
+              </li>
+              <li>
+                <small><a href="">Refund Policy</a></small>
+              </li>
+              <li>
+                <small><a href="">Legal Section</a></small>
+              </li>
+              <li>
+                <small><a href="">Claim Center</a></small>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-12 box-2">
+            <small>
+              LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online. LEGO, the LEGO
+              logo, the Minifigure, DUPLO, the FRIENDS logo, the MINIFIGURES logo, DREAMZzz, NINJAGO, VIDIYO and
+              MINDSTORMS are trademarks of the LEGO Group. ©2025 The LEGO Group. All rights reserved. Use of this site
+              signifies your agreement to the Terms of Use.
+            </small>
+          </div>
+          <div class="trademark d-flex justify-content-end text-white mt-4 mb-3">
+            <small>Copyright &copy; Aaqil Rao <span id="year"></span></small>
+            <span>
+              <a href="https://github.com/Aqil321821" target="_blank" class="ms-2 text-white">
+                <i class="bi bi-github"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

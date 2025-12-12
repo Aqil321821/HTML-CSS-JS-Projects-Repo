@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traders Joe</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- toppest div above navbar -->
+  <div class="top-div">
+    <div class="px-md-5 d-flex justify-content-end py-md-2 ps-0">
+      <ul class="d-flex flex-wrap gap-2 gap-md-4 mb-0">
+        <li>
+          <a href=""><i class="bi bi-geo-alt"></i>
+            <span class="visually-hidden">Location icon</span>
+
+            Select Your Store</a>
+        </li>
+
+        <li class="d-none d-md-inline-block">
+          <a href="">Stores</a>
+        </li>
+        <li class="d-none d-md-inline-block">
+          <a href="">About Us</a>
+        </li>
+        <li class="d-none d-md-inline-block">
+          <a href="">Careers</a>
+        </li>
+        <li class="d-none d-md-inline-block">
+          <a href="">Announcement</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" id="myNav">
+    <div class="container-fluid pb-2">
+      <div class="d-flex align-items-center desktop-nav">
+        <span class="d-block" id="ham-btn-desk">
+          <img src="./assets/home/icon-3.svg" />
+        </span>
+        <span class="d-none" id="corss-btn-desk">
+          <img src="./assets/home/icon-4.svg" />
+        </span>
+        <a class="navbar-brand ms-3 ms-md-5" href="#"> <img src="./assets/home/logo.svg" /> </a>
+      </div>
+      <div class="d-flex align-items-center mobile-nav">
+        <span class="d-block" id="ham-btn-mob">
+          <img src="./assets/home/icon-3.svg" />
+        </span>
+        <span class="d-none" id="corss-btn-mob">
+          <img src="./assets/home/icon-4.svg" />
+        </span>
+        <a class="navbar-brand ms-3 ms-md-5" href="#"> <img src="./assets/home/logo.svg" /> </a>
+      </div>
+      <div class="d-flex align-items-center gap-4 pt-2 icons">
+        <div>
+          <img src="./assets/home/icon-1.svg" />
+          <a href="">Search</a>
+        </div>
+        <div>
+          <img src="./assets/home/icon-2.svg" />
+          <a href="">Shopping List</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Ribbon -->
+  <!-- <div class="position-relative"></div> -->
+  <div class="bookmark d-none" id="bookmark">
+    <ul>
+      <li>
+        <img src="./assets/home/icon-5.webp" alt="">
+        <a href="">Products</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-6.webp" alt="">
+        <a href="">Discover</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-7.webp" alt="">
+        <a href="">Recipes</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-8.webp" alt="">
+        <a href="">Listen</a>
+      </li>
+    </ul>
+    <!-- red element on end of ribbon -->
+    <div class="position-relative">
+      <div class="position-absolute leftBM"></div>
+      <div class="position-absolute rightBM"></div>
+    </div>
+  </div>
+
+
+  <!-- offcanvas menufor dekstop -->
+  <div id="my-menu-offcanvas1" class="d-flex">
+    <!-- 1st col of menu -->
+    <div class="d-flex first-menu-col">
+      <div class="d-flex flex-column gap-2">
+        <h5>
+          <strong> Products </strong>
+        </h5>
+        <span><strong>What's New</strong></span>
+        <div class="d-flex flex-column gap-2">
+          <span><strong>Food</strong></span>
+          <ul class="list-inline d-flex flex-column gap-2">
+            <li><a href="">Bakery</a></li>
+            <li><a href="">Cheese</a></li>
+            <li><a href="">Dairy & Eggs</a></li>
+            <li><a href="">Dips, Sauces & Dressings</a></li>
+            <li><a href="">Fresh Prepared Foods</a></li>
+            <li><a href="">From the Freezer</a></li>
+            <li><a href="">Fresh Fruits & Veggies</a></li>
+            <li><a href="">Meat, Seafood & Plant-based</a></li>
+            <li><a href="">For the Pantry</a></li>
+            <li><a href="">Snacks & Sweets</a></li>
+          </ul>
+          <div class="d-flex flex-column gap-2">
+            <span><strong>Beverages</strong></span>
+            <span><strong>Flower & Plants</strong></span>
+            <span><strong>Everything Else</strong></span>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/home/icon-5.webp" />
+    </div>
+    <!-- 2nd col of menu -->
+    <div class="d-flex first-menu-col ms-3">
+      <div class="d-flex flex-column gap-3">
+        <div class="d-flex column-gap-5 justify-content-between">
+          <div>
+            <h5>
+              <strong> Discover </strong>
+            </h5>
+            <ul class="list-inline d-flex flex-column gap-2">
+              <li><a href="">Entertaining</a></li>
+              <li><a href="">Guides</a></li>
+              <li><a href="">Stories</a></li>
+              <li><a href="">Subscribe</a></li>
+            </ul>
+          </div>
+          <div>
+            <img src="./assets/home/icon-6.webp" />
+          </div>
+        </div>
+        <div class="d-flex column-gap-5 justify-content-between">
+          <div>
+            <h5>
+              <strong> Recipes </strong>
+            </h5>
+            <ul class="list-inline d-flex flex-column gap-2">
+              <li><a href="">Appetizers & Sides</a></li>
+              <li><a href="">Beverages</a></li>
+              <li><a href="">Breakfast</a></li>
+              <li><a href="">Lunch</a></li>
+              <li><a href="">Dinner</a></li>
+              <li><a href="">Desserts</a></li>
+            </ul>
+          </div>
+          <div>
+            <img src="./assets/home/icon-7.webp" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-between column-gap-5">
+          <div>
+            <h5>
+              <strong> Listen </strong>
+            </h5>
+          </div>
+          <div>
+            <img src="./assets/home/icon-8.webp" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-between column-gap-5">
+          <div>
+            <h5>
+              <strong> Careers </strong>
+            </h5>
+          </div>
+          <div>
+            <img src="./assets/home/icon-9.webp" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 3rd col of menu -->
+    <div class="d-flex first-menu-col no ms-3">
+      <div class="d-flex flex-column gap-3">
+        <div class="d-flex column-gap-5 justify-content-between">
+          <div>
+            <h5>
+              <strong> About Us </strong>
+            </h5>
+            <ul class="list-inline d-flex flex-column gap-2">
+              <li><a href="">Neighborhood Shares</a></li>
+              <li><a href="">Announcements</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h5>
+            <strong> Find A Store </strong>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- offcanvas menu for tablets and mobiles -->
+  <div class="off-mobile" id="off-mobile">
+    <ul class="list-unstyled">
+      <li>
+        <img src="./assets/home/icon-5.webp" alt="" />
+        <a href="">Products</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-6.webp" alt="" />
+        <a href="">Discover</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-7.webp" alt="" />
+        <a href="">Recipes</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-8.webp" alt="" />
+        <a href="">Listen</a>
+      </li>
+      <li>
+        <img src="./assets/home/icon-9.webp" alt="" />
+        <a href="">Careers</a>
+      </li>
+      <li class="no-img">
+        <a href="">About Us</a>
+      </li>
+      <li class="no-img">
+        <a href="">Find A Store</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- main section -->
+  <header>
+    <section id="header">
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-5 d-flex align-items-center mt-5">
+            <div class="header-content">
+              <h1>Pizza Party & Recipe Party</h1>
+              <p>
+                At Trader Joe’s, we embrace the culinary seasons and seasonings from around the world, with summertime
+                being no exception. In that spirit, we invite you to this unique cookout, featuring Trader Joe's
+                Soyaki!
+              </p>
+              <button>
+                <div class="leftDiv"></div>
+                ENTER NOW
+                <div class="rightDiv"></div>
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <img src="./assets/home/webp-1280.webp" />
+            <div class="col-lg-5 d-flex align-items-center">
+              <div class="header-content-box2">
+                <p>
+                  At Trader Joe’s, we embrace the culinary seasons and seasonings from around the world, with summertime
+                  being no exception. In that spirit, we invite you to this unique cookout, featuring Trader Joe's
+                  Soyaki!
+                </p>
+                <button>
+                  <div class="leftDiv"></div>
+                  ENTER NOW
+                  <div class="rightDiv"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </header>
+
+
+  <main>
+
+    <section class="py-3 sec-1">
+      <div class="container ">
+        <div class="row py-3">
+          <div class="col-12 mb-5 ">
+            <h1 class="text-center">Welcome to Trader Joe's !</h1>
+          </div>
+          <!-- slider col -->
+          <div class="col-lg-7 offset-lg-1 mt-5">
+            <div class="bell mb-4">
+              <h5 class="mb-5">What's New ?</h5>
+              <img src="./assets/home/Icon-11.webp">
+            </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="img ">
+                    <img src="./assets/home/slider1/webp-1280.webp" alt="">
+                  </div>
+                  <div class="card-text mt-3">
+                    <h2>
+                      <a href="">Caro Sugo Italian Tomato Basil Pasta...</a>
+                    </h2>
+                    <p>
+                      To create this beloved sauce, we partnered with a supplier located in Puglia (the heel of the
+                      “boot”), where the hot, dry summers and mild, wet winters of this Mediterranean region are ideal
+                      for growing tomatoes...
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="img">
+                    <img src="./assets/home/slider1/webp-1280(1).webp" alt="">
+                  </div>
+                  <div class="card-text mt-3">
+                    <h2>
+                      <a href="">Authentic Italian Olive Oil</a>
+                    </h2>
+                    <p>
+                      Cold-pressed from hand-picked olives, this extra virgin olive oil delivers a rich, fruity taste.
+                      Perfect for drizzling over salads, dipping bread, or cooking classic Italian dishes.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="img">
+                    <img src="./assets/home/slider1/webp-1280 (2).webp" alt="">
+                  </div>
+                  <div class="card-text mt-3">
+                    <h2>
+                      <a href="">Freshly Made Pasta</a>
+                    </h2>
+                    <p>
+                      Crafted with durum wheat semolina and fresh spring water, our pasta is slow-dried for a firm
+                      texture
+                      and authentic taste — just like traditional Italian kitchens.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <div class="img">
+                    <img src="./assets/home/slider1/webp-1280 (3).webp" alt="">
+                  </div>
+                  <div class="card-text mt-3">
+                    <h2>
+                      <a href="">Classic Italian Balsamic Vinegar</a>
+                    </h2>
+                    <p>
+                      Aged in wooden barrels in Modena, this balsamic vinegar offers a perfect balance of sweetness and
+                      tang,
+                      ideal for marinades, dressings, and gourmet finishing.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                  <div class="img">
+                    <img src="./assets/home/slider1/webp-1280 (4).webp" alt="">
+                  </div>
+                  <div class="card-text mt-3">
+                    <h2>
+                      <a href="">Rustic Italian Bread</a>
+                    </h2>
+                    <p>
+                      Baked with a slow fermentation process, this rustic loaf has a crispy crust and soft, airy
+                      interior —
+                      perfect for enjoying with olive oil and sauces.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+            </div>
+            <!-- swiper ends -->
+          </div>
+          <!-- sec-col -->
+          <div class="sec-col col-lg-4 mt-5 mt-lg-0">
+            <div class="podcast">
+              <h5 class="mb-5">Podcast</h5>
+            </div>
+            <div class="podcast-box d-flex flex-column p-4 pt-5">
+              <div class="d-flex gap-4 rao">
+                <div class="play">
+                  <i style="font-size: 3rem;" class="bi bi-play-circle-fill"></i>
+                </div>
+                <div class="d-flex flex-column content">
+                  <h6>Episode 93</h6>
+                  <h4>Time To Get Your Grill On with Trad...</h4>
+                  <span> 27 min 51 sec </span>
+                </div>
+              </div>
+              <div>
+
+              </div>
+              <div class="p-5">
+                <img src="./assets/home/col-2/webp-1280.webp">
+                <button class="ms-3">
+                  <div class="leftDiv"></div>
+                  ENTER NOW
+                  <div class="rightDiv"></div>
+                </button>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec-2">
+      <div class="container">
+        <div class="row ms-lg-3">
+          <div class="col-12 col-lg-11 w-100">
+            <h3>Believe-Eat-Or-Not Recipes
+              <img src="./assets/home/balti.webp">
+            </h3>
+          </div>
+        </div>
+        <div class="row sec-row ms-lg-3 ">
+          <div class="col-12 d-flex justify-content-center col-lg-3 d-lg-block ">
+            <div class="card">
+              <div class="name">
+                <span>DELISH !</span>
+              </div>
+              <div class="card-header">
+                <h4 class="style-script-regular">Crispy Proscuito & Grilled Cheese</h4>
+
+              </div>
+              <div class="card-body">
+                <img src="./assets/home/card1.webp">
+                <p>
+                  It’s no secret that our Crew is comprised of some of the most culinarily creative folks around, so for
+                  the second time, we challenged our stores across the country to a Recipe Contest, inviting them to
+                  create a delicious recipe using no more than five Trader Joe’s ingredients.
+                </p>
+              </div>
+              <div class="bottom-card mb-4 py-2 px-3 d-flex justify-content-between">
+                <span>Serves 9</span>
+                <span>
+                  Time 1 h 20 mins
+                </span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="card sec-card">
+              <div class="name">
+                <span>SO. Good.</span>
+              </div>
+              <div class="card-header">
+                <h4 class="style-script-regular">Sweet Gold Grilled Chicken Thighs</h4>
+
+              </div>
+              <div class="card-body">
+                <img src="./assets/home/card2.jpeg">
+                <p>
+                  Trader Joe’s All Natural Bone-In Skin-On Chicken Thighs are darn-near-perfect for grilling. Thigh meat
+                  is always incredibly flavorful, and that robust flavor is even more pronounced when the skin and bones
+                  are left intact. And even more pronounced if you slather them in TJ's Carolina Gold Barbeque Sauce!
+                  Watch our how-to video or read the instructions that follow and you’ll be adding “grill master” to
+                  your resumé in no time.
+                </p>
+              </div>
+              <div class="bottom-card mb-4 py-2 px-3 d-flex justify-content-between">
+                <span>Serves 2 - 4</span>
+                <span>
+                  Time 25 mins
+                </span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="card third-card">
+              <div class="name">
+                <span>YUM!</span>
+              </div>
+              <div class="card-header">
+                <h4 class="style-script-regular">Lemon Pesto Potato Salad </h4>
+
+              </div>
+              <div class="card-body">
+                <img src="./assets/home/card3.webp">
+                <p>
+                  In Italian, the word pesto can be translated as “to pound” or “to crush,” referring to the traditional
+                  method in which pesto sauce is made. With Trader Joe’s Lemon Pesto Sauce, the laborious process of
+                  crushing whole lemons with Grana Padano cheese, almonds, and a pinch of pepper has already been
+                </p>
+              </div>
+              <div class="bottom-card mb-4 py-2 px-3 d-flex justify-content-between">
+                <span>Serves 9</span>
+                <span>
+                  Time 1 h 20 mins
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row third-row mt-3  text-center">
+          <div class="col-12">
+            <button>
+              <div class="leftDiv"></div>
+              SEE MORE RECIPES
+              <div class="rightDiv"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="sec-3 mt-5">
+      <div class="container">
+        <div class="row ms-lg-3 ">
+          <div class="col-12">
+            <h3 class="mb-3">And There's More..
+              <img src="./assets/home/book.webp">
+            </h3>
+          </div>
+        </div>
+
+
+
+        <div class="row sec-row ms-lg-4 mx-1 mx-md-0 mt-4 ">
+          <div class="col-md-6 box-1">
+            <img src="./assets/home/sec-3.webp">
+          </div>
+          <div class="col-md-6 box-2 d-flex flex-column p-4">
+            <div class="d-flex flex-column">
+              <span class="tag">Stories</span>
+              <span>July 28, 2025</span>
+            </div>
+            <h4>Are You Cereal Right Now?</h4>
+            <p>
+              Have you seen the cereal section at your neighborhood TJ's lately? You’ll find a wide selection of tasty,
+              bowl-worthy grains that will fit almost any mood or eating occasion. We know what you’re thinking: Trader
+              Joe’s, are you cereal right now?! Yes, we are! Sooo cereal. And we think you should be, too...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-4  mt-5">
+      <div class="container">
+        <div class="row ms-lg-3 mx-1 mx-md-0 main-row">
+          <div class="col-md-6 box-1 ">
+            <div class="row sub-row-1  ">
+              <!-- stories ka col -->
+              <div class="col-12 sub-col-1">
+                <div class="row">
+                  <div class="col-5">
+                    <img src="./assets/home/sec4-1.webp">
+                  </div>
+                  <div class="col-7 d-flex flex-column">
+                    <span class="tag d-inline-block">Stories</span>
+                    <span class="d-inline-block">July 21 , 2025</span>
+                    <h3>2025 Store Recipe Contest Winner</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Guides ka col -->
+              <div class="col-12 sub-col-2 mt-3">
+                <div class="row">
+                  <div class="col-5">
+                    <img src="./assets/home/sec4-2">
+                  </div>
+                  <div class="col-7 d-flex flex-column">
+                    <span class="tag d-inline-block">Guides</span>
+                    <span class="d-inline-block">July 7 , 2025</span>
+                    <h3>Lemon & Thyme Triple Berry <br> Pie</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- button ka col -->
+              <div class="col-12 sub-col-3 mt-5 mb-5">
+                <button>
+                  <div class="leftDiv"></div>
+                  DISCOVER MORE
+                  <div class="rightDiv"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="col-md-6 mt-5 mt-md-0 ps-md-5 d-none d-md-block">
+            <img src="./assets/home/sec-4Col-2.webp">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-5">
+      <div class="container ">
+        <div class="row ms-lg-3">
+          <div class="col-12 col-lg-11 w-100">
+            <h3>Read It & Eat</h3>
+          </div>
+        </div>
+        <div class="row sec-row ms-lg-3 mt-3 mt-lg-5 pb-4">
+          <div class="col-1">
+            <h1>1.</h1>
+          </div>
+          <div class="col-11">
+            <h6>Tofu Breakfast Tacos</h6>
+            <p>
+              While eggs are normally the go-to ingredient for scrambling purposes, variety is truly the spice of life.
+              So, take a cue from this recipe video for tofu breakfast tacos (starring none other than Trader Joe’s
+              Organic Tofu) and shake up your morning routine. But how do these breakfast tacos get their heft? Watch
+              and find out...
+            </p>
+            <span>May 12 , 2025</span>
+          </div>
+        </div>
+        <div class="row sec-row ms-lg-3 mt-3 mt-lg-5 pb-4">
+          <div class="col-1">
+            <h1>2.</h1>
+          </div>
+          <div class="col-11">
+            <h6>Put THAT In a Bowl & Eat It</h6>
+            <p>
+              When life gets busy, making meals shouldn’t feel like solving an algebraic equation. Enter: Trader Joe’s
+              Complete Salad Kits and our awesome array of ready-to-eat and pre-cooked proteins! Toss up a tasty and
+              Complete Salad—and add a protein to the mix, then you’ve got dinner! Or lunch. Or a side salad. Watch
+              these three videos and we’ll show you how...
+            </p>
+            <span>January 6 , 2025</span>
+          </div>
+        </div>
+        <div class="row last-row ms-lg-3 mt-3 mt-lg-5">
+          <div class="container">
+            <div class="col-12">
+              <button>
+                <div class="leftDiv"></div>
+                GUIDE TO... EVERYTHING
+                <div class="rightDiv"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="sec-6">
+      <div class="container">
+        <div class="row ms-lg-3">
+          <div class="col-md-5 box-1">
+            <img src="./assets/home/choco.webp">
+          </div>
+          <div class="col-md-6 box-2 ">
+            <div class="row">
+              <h3 class="mb-3">In Case You Missed It!</h3>
+              <div class="col-12">
+                <div class="d-flex flex-column box-21">
+                  <span class="tag">Store Openings</span>
+                  <span>August 16,2025</span>
+                  <h5 class="mt-3 mb-4">Yucaipa,CA-Now Open!</h5>
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <div class="d-flex flex-column box-21">
+                  <span class="tag">Store Openings</span>
+                  <span>August 11,2025</span>
+                  <h5 class="mt-3 mb-4">New Orleans (Mid-City), LA-Now Open!</h5>
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <div class="d-flex flex-column box-21">
+                  <span class="tag">Store Openings</span>
+                  <span>July 25,2025</span>
+                  <h5 class="mt-3 mb-4">Westminster, CO-Now Open!</h5>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row gap-5 last-row ms-lg-3 mt-3 mt-lg-5 pb-4 ">
+
+        <div class="col-md-3 social order-2 order-md-1">
+          <h5>Follow Us</h5>
+          <div class="d-flex gap-3">
+            <i class="bi bi-broadcast-pin"></i>
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-pinterest"></i>
+          </div>
+        </div>
+
+        <div class="col-md-4 copy d-flex flex-column gap-3 order-3 order-md-2">
+          <span>Copyright © Trader Joe’s 2025. All rights reserved.</span>
+          <div class="d-flex gap-3">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Accessiblity</a>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="">Transparency in Supply Chain Act</a>
+            <a href="">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Logo column -->
+        <div class="col-md-3 ms-auto order-1 order-md-3 text-center">
+          <img src="./assets/home/logo.svg">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
