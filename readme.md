@@ -19,25 +19,25 @@ All projects are deployed for quick live previews, with source code organized in
 
 ## 📚 Projects List
 
-| #   | Project Name             | Live Demo                                           |
-| --- | ------------------------ | --------------------------------------------------- |
-| 01  | Freelance Form Project   | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 02  | Shoe Cards               | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 03  | Responsive Pricing Grid  | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 04  | Representational website | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 05  | Landing Page with A Form | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 06  | Gallery App Grid         | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 07  | Tutor Website            | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 08  | Leno App Website         | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 09  | Business Website         | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 10  | Apple Website            | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 11  | Builder Website          | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 12  | A Tour Website           | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 13  | Paypal Clone             | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 14  | Traders-Joe              | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 15  | Lego                     | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 16  | starbucks                | [Live Demo](https://your-netlify-link.netlify.app/) |
-| 17  | Tiffany                  | [Live Demo](https://your-netlify-link.netlify.app/) |
+| #   | Project Name             | Live Demo                                                    |
+| --- | ------------------------ | ------------------------------------------------------------ |
+| 01  | Freelance Form Project   | [Live Demo](https://aqilrao-project1.netlify.app/)           |
+| 02  | Shoe Cards               | [Live Demo](https://aqilrao-project2.netlify.app/)           |
+| 03  | Responsive Pricing Grid  | [Live Demo](https://aqilrao-project3.netlify.app/)           |
+| 04  | Representational website | [Live Demo](https://aqilrao-project4.netlify.app/#page-1)    |
+| 05  | Landing Page with A Form | [Live Demo](https://aqilrao-project5.netlify.app/)           |
+| 06  | Gallery App Grid         | [Live Demo](https://aqilrao-project6.netlify.app/)           |
+| 07  | Tutor Website            | [Live Demo](https://aqilrao-project7.netlify.app/)           |
+| 08  | Leno App Website         | [Live Demo](https://aqilrao-project8.netlify.app/)           |
+| 09  | Business Website         | [Live Demo](https://aqilrao-project9.netlify.app/)           |
+| 10  | Apple Website            | [Live Demo](https://stellular-cucurucho-38f4e9.netlify.app/) |
+| 11  | Builder Website          | [Live Demo](https://frabjous-malabi-f0e926.netlify.app/)     |
+| 12  | A Tour Website           | [Live Demo](https://12-tour-website.netlify.app/)            |
+| 13  | Paypal Clone             | [Live Demo](https://funny-pie-e7abff.netlify.app/)           |
+| 14  | Traders-Joe              | [Live Demo](https://strong-starship-d697fb.netlify.app/)     |
+| 15  | Lego                     | [Live Demo](https://loquacious-narwhal-c091fc.netlify.app/)  |
+| 16  | starbucks                | [Live Demo](https://sweet-dieffenbachia-cb89ab.netlify.app/) |
+| 17  | Tiffany                  | [Live Demo](https://admirable-lollipop-89f408.netlify.app/)  |
 
 ---
 
