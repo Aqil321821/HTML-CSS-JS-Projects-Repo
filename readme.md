@@ -34,6 +34,10 @@ All projects are deployed for quick live previews, with source code organized in
 | 11  | Builder Website          | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 12  | A Tour Website           | [Live Demo](https://your-netlify-link.netlify.app/) |
 | 13  | Paypal Clone             | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 14  | Traders-Joe              | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 15  | Lego                     | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 16  | starbucks                | [Live Demo](https://your-netlify-link.netlify.app/) |
+| 17  | Tiffany                  | [Live Demo](https://your-netlify-link.netlify.app/) |
 
 ---
 
